@@ -1,0 +1,34 @@
+Testing the Connection
+To test the connection and ensure that your Prisma setup is correct, you can use the Prisma CLI to interact with your database directly:
+
+Check Prisma Schema:
+
+bash
+Copy code
+npx prisma validate
+Inspect Database:
+
+bash
+Copy code
+npx prisma db pull
+Querying Data:
+
+bash
+Copy code
+npx prisma studio
+
+================ ADD COLUMN ===============
+Add column in prisma file.
+then follow the below commands,
+
+npx prisma migrate dev --create-only --name add-password-to-user
+npx prisma migrate dev
+
+
+
+============= ADD MODULE ===================
+cmd1: nest g module businessunit
+add the module into main module file
+cmd2: nest g controller businessunit
+cmd3: nest g service businessunit
+
