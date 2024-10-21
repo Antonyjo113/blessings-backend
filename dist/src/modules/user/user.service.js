@@ -52,13 +52,15 @@ let UserService = class UserService {
         }
     }
     async createUser(createUserDto) {
-        const { name, email } = createUserDto;
+        const { name, email, role, password } = createUserDto;
         try {
             const user = await this.prisma.user.create({
                 data: {
                     name,
                     email,
                     status: user_model_1.UserStatus.ACTIVE,
+                    role,
+                    password
                 },
             });
             return user;
@@ -66,6 +68,19 @@ let UserService = class UserService {
         catch (error) {
             console.error('Error creating user:', error);
             throw new Error('Failed to create user');
+        }
+    }
+    async updateUser(id, updateUserDto) {
+        try {
+            const data = await this.prisma.user.update({
+                where: { id },
+                data: updateUserDto,
+            });
+            return data;
+        }
+        catch (error) {
+            console.error('Error updating business unit:', error);
+            throw new common_1.NotFoundException(`Business Unit with ID ${id} not found`);
         }
     }
     getUserById(id) {

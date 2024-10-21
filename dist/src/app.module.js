@@ -12,6 +12,9 @@ const prisma_module_1 = require("../prisma/prisma.module");
 const auth_module_1 = require("./modules/auth/auth.module");
 const user_module_1 = require("./modules/user/user.module");
 const businessunit_module_1 = require("./modules/businessunit/businessunit.module");
+const booking_module_1 = require("./modules/booking/booking.module");
+const booking_controller_1 = require("./modules/booking/booking.controller");
+const booking_service_1 = require("./modules/booking/booking.service");
 let AppModule = class AppModule {
 };
 exports.AppModule = AppModule;
@@ -21,10 +24,11 @@ exports.AppModule = AppModule = __decorate([
             prisma_module_1.PrismaModule,
             auth_module_1.AuthModule,
             user_module_1.UserModule,
-            businessunit_module_1.BusinessunitModule
+            businessunit_module_1.BusinessunitModule,
+            booking_module_1.BookingModule
         ],
-        controllers: [],
-        providers: [],
+        controllers: [booking_controller_1.BookingController],
+        providers: [booking_service_1.BookingService],
     })
 ], AppModule);
 //# sourceMappingURL=app.module.js.map

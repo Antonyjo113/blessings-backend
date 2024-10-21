@@ -19,6 +19,7 @@ const user_model_1 = require("./user.model");
 const create_user_dto_1 = require("./dto/create-user.dto");
 const login_dto_1 = require("./dto/login.dto");
 const user_status_validation_pipe_1 = require("./pipes/user-status-validation.pipe");
+const update_user_dto_1 = require("./dto/update-user.dto");
 let UserController = class UserController {
     constructor(userService) {
         this.userService = userService;
@@ -40,6 +41,9 @@ let UserController = class UserController {
     }
     updateUserStatus(id, status) {
         return this.userService.updateUserStatus(id, status);
+    }
+    updateUser(id, updateUserDto) {
+        return this.userService.updateUser(id, updateUserDto);
     }
 };
 exports.UserController = UserController;
@@ -86,6 +90,14 @@ __decorate([
     __metadata("design:paramtypes", [String, String]),
     __metadata("design:returntype", void 0)
 ], UserController.prototype, "updateUserStatus", null);
+__decorate([
+    (0, common_1.Patch)(':id'),
+    __param(0, (0, common_1.Param)('id')),
+    __param(1, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [String, update_user_dto_1.UpdateUserDto]),
+    __metadata("design:returntype", void 0)
+], UserController.prototype, "updateUser", null);
 exports.UserController = UserController = __decorate([
     (0, common_1.Controller)('user'),
     __metadata("design:paramtypes", [user_service_1.UserService])

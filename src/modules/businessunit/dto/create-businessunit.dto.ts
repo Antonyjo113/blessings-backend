@@ -7,4 +7,7 @@ export class CreateBusinessUnitDto {
     
     @IsNotEmpty()
     place: string;
+
+    @IsNotEmpty()
+    status: string;
 }

@@ -1,0 +1,12 @@
+-- AlterTable
+ALTER TABLE "Booking" ALTER COLUMN "is_corporate" SET DATA TYPE TEXT,
+ALTER COLUMN "checkin" SET DATA TYPE TEXT,
+ALTER COLUMN "checkout" SET DATA TYPE TEXT,
+ALTER COLUMN "total_amount_including_extra_cost" SET DATA TYPE TEXT,
+ALTER COLUMN "get_amount_paid" SET DATA TYPE TEXT,
+ALTER COLUMN "status_key" SET DATA TYPE TEXT,
+ALTER COLUMN "source_key" SET DATA TYPE TEXT,
+ALTER COLUMN "contains_notes" SET DATA TYPE TEXT,
+ALTER COLUMN "no_of_adults" SET DATA TYPE TEXT,
+ALTER COLUMN "no_of_rooms" SET DATA TYPE TEXT,
+ALTER COLUMN "is_wizard_booking" SET DATA TYPE TEXT;

@@ -4,6 +4,7 @@ import { User, UserStatus } from './user.model';
 import { CreateUserDto } from './dto/create-user.dto';
 import { LoginDto } from './dto/login.dto';
 import { UserStatusValidationStatus } from './pipes/user-status-validation.pipe';
+import { UpdateUserDto } from './dto/update-user.dto';
 
 @Controller('user')
 export class UserController {
@@ -58,6 +59,11 @@ export class UserController {
         return this.userService.updateUserStatus(id, status);
     }
 
-
-
+    @Patch(':id')
+    updateUser(
+        @Param('id') id: string,
+        @Body() updateUserDto: UpdateUserDto
+    ) {
+        return this.userService.updateUser(id, updateUserDto);
+    }
 }

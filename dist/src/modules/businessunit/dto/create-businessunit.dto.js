@@ -22,4 +22,8 @@ __decorate([
     (0, class_validator_1.IsNotEmpty)(),
     __metadata("design:type", String)
 ], CreateBusinessUnitDto.prototype, "place", void 0);
+__decorate([
+    (0, class_validator_1.IsNotEmpty)(),
+    __metadata("design:type", String)
+], CreateBusinessUnitDto.prototype, "status", void 0);
 //# sourceMappingURL=create-businessunit.dto.js.map

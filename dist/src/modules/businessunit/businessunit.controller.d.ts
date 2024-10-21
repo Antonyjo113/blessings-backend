@@ -11,10 +11,12 @@ export declare class BusinessunitController {
         id: string;
         name: string;
         place: string;
+        status: string | null;
     }>;
     update(id: string, updateBusinessUnitDto: UpdateBusinessUnitDto): Promise<{
         id: string;
         name: string;
         place: string;
+        status: string | null;
     }>;
 }

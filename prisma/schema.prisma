@@ -20,4 +20,30 @@ model BusinessUnit {
   id    String @id @default(uuid()) @db.Uuid
   name  String
   place String
+  status String?
 }
+model Booking {
+    id                                String    @id @default(uuid()) @db.Uuid
+    is_corporate                      String
+    booking_no                        String
+    checkin                           String
+    checkout                          String
+    guest_name                        String
+    total_amount_including_extra_cost String
+    get_amount_paid                   String
+    status_key                        String
+    source_key                        String
+    status                            String
+    source                            String
+    payment_type                      String
+    ota_source                        String
+    ota_prefix                        String
+    ota_booking_id                    String
+    meal_plan_type                    String
+    contains_notes                    String
+    no_of_adults                      String
+    no_of_rooms                       String
+    is_wizard_booking                 String
+}
+
+

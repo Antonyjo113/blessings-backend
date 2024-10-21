@@ -6,6 +6,7 @@ import { NotFoundError } from 'rxjs';
 import { PrismaService } from 'prisma/prisma.service';
 import { User } from '@prisma/client';
 import { LoginDto } from './dto/login.dto';
+import { UpdateUserDto } from './dto/update-user.dto';
 
 @Injectable()
 export class UserService {
@@ -49,14 +50,16 @@ export class UserService {
     }
 
     async createUser(createUserDto: CreateUserDto): Promise<User> {
-        const { name, email } = createUserDto;
-    
+        const { name, email, role, password } = createUserDto;
+        
         try {
           const user = await this.prisma.user.create({
             data: {
               name,
               email,
               status: UserStatus.ACTIVE,
+              role,
+              password
             },
           });
           return user;
@@ -65,6 +68,19 @@ export class UserService {
           throw new Error('Failed to create user');
         }
     }
+
+    async updateUser(id: string, updateUserDto: UpdateUserDto): Promise<User> {
+      try {
+          const data = await this.prisma.user.update({
+              where: { id },
+              data: updateUserDto,
+          });
+          return data;
+      } catch (error) {
+          console.error('Error updating business unit:', error);
+          throw new NotFoundException(`Business Unit with ID ${id} not found`);
+      }
+  }
 
     // getAllUsers(): User[] {
     //     return this.users;
@@ -103,6 +119,4 @@ export class UserService {
         user.status = status;
         return user;
     }
-
-
 }

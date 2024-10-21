@@ -1,0 +1,7 @@
+exclusiveBooking	id	is_corporate	booking_no	checkin	checkout	guest_name	total_amount_including_extra_cost	get_amount_paid	status_key	source_key	status	source	payment_type	ota_source	ota_prefix	ota_booking_id	meal_plan_type	contains_notes	no_of_adults	no_of_rooms	is_wizard_booking
+
+
+
+exclusiveBooking	id	is_corporate	booking_no	checkin	checkout	guest_name	total_amount_including_extra_cost	get_amount_paid	status_key	source_key	status	source	payment_type	ota_source	ota_prefix	ota_booking_id	meal_plan_type	contains_notes	no_of_adults	no_of_rooms	is_wizard_booking
+FALSE	169928675	FALSE	LEWD4985	2020-11-03	2020-11-04	Vaddadi  Surya Kiran  	856	866.97	0	1	Confirm Booking	Online Travel Agent	Prepaid	GoMMT	OTA PNR	67769534	EP	TRUE	1	1	FALSE
+

@@ -2,6 +2,7 @@ import { UserService } from './user.service';
 import { User, UserStatus } from './user.model';
 import { CreateUserDto } from './dto/create-user.dto';
 import { LoginDto } from './dto/login.dto';
+import { UpdateUserDto } from './dto/update-user.dto';
 export declare class UserController {
     private userService;
     constructor(userService: UserService);
@@ -18,4 +19,12 @@ export declare class UserController {
         role: string | null;
         password: string | null;
     };
+    updateUser(id: string, updateUserDto: UpdateUserDto): Promise<{
+        id: string;
+        name: string;
+        email: string;
+        status: string;
+        role: string | null;
+        password: string | null;
+    }>;
 }
