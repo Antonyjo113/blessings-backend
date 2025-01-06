@@ -31,8 +31,9 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Antony Joseph Raj] Gmail: antonyjo113@gamil
-- LinkedIn - (https://www.linkedin.com/in/antony-joseph-raj-9a1a93185/)
+- Author - Antony Joseph Raj
+- Gmail - antonyjo113@gamil.com
+- LinkedIn - https://www.linkedin.com/in/antony-joseph-raj-9a1a93185/
 
 ## License
 
